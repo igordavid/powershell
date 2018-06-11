@@ -18,4 +18,4 @@ c:\work\scripts
 
 Use the script:
 
-$update-service.ps1 --image_name IMAGE_NAME --service_name SERVICE_NAME --cluster_name CLUSTER_NAME --task_definition_name TASK_DEFINITION_NAME --region AWS_REGION
+$update-service.ps1 -aws_account_number YOUR_AWS_ACCOUNT_NUMBER -image_name IMAGE_NAME -service_name SERVICE_NAME -cluster_name CLUSTER_NAME -task_definition_name TASK_DEFINITION_NAME -region AWS_REGION
