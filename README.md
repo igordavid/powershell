@@ -4,18 +4,20 @@ It assumes that you have created initial infrastructure (ECS Windows Cluster, Se
 
 You will need to run this on Windows 2016 server with Docker installed.
 
-Create directory with your web application:
+Run "./setup.ps1" which will do the following tasks for you:
+
+1) Create "content" directory for your web application:
 
 c:\work\docker\content
 
-Place Dockerfile in here:
+2) Place Dockerfile in here:
 
 c:\work\docker\Dockerfile
 
-Put update-service.ps1 script in here:
+3) Place update-service.ps1 in here:
 
-c:\work\scripts
+c:\work\scripts\update-service.ps1
 
-Use the script:
+After that, you can use the script to update your service with new task definitions and images built from Dockerfile:
 
-$update-service.ps1 -aws_account_number YOUR_AWS_ACCOUNT_NUMBER -image_name IMAGE_NAME -service_name SERVICE_NAME -cluster_name CLUSTER_NAME -task_definition_name TASK_DEFINITION_NAME -region AWS_REGION
+`$update-service.ps1 -aws_account_number YOUR_AWS_ACCOUNT_NUMBER -image_name IMAGE_NAME -service_name SERVICE_NAME -cluster_name CLUSTER_NAME -task_definition_name TASK_DEFINITION_NAME -region AWS_REGION`
